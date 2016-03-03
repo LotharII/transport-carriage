@@ -6,7 +6,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>web</artifactId>
+    <artifactId>transport-carriage-web</artifactId>
     <packaging>war</packaging>
     <name>web</name>
     <url>http://maven.apache.org</url>
@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>transport-carriage</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>transport-carriage-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
@@ -43,8 +43,13 @@
             <version>2.22.2</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>transport-carriage</groupId>
+            <artifactId>transport-carriage-services</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
-        <finalName>web</finalName>
+        <finalName>transport-carriage-web</finalName>
     </build>
 </project>
