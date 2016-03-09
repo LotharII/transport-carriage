@@ -2,26 +2,26 @@ package rest.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import services.TrySpring;
-import services.config.SpringConfig;
+
 
 /**
  * Created by oleksii.khilkevych on 3/2/2016.
  */
-@Path("/try")
+@Controller
 public class TryRest {
 
     @Autowired
     private TrySpring trySpring;
 
-    @GET
-    @Produces("text/plain")
-    public String getHello() {
+    @RequestMapping(value = "/try", method = RequestMethod.GET)
+    public @ResponseBody
+    String getHello() {
         return "TryRest hello" + trySpring.getMessage();
     }
+
 }
