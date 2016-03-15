@@ -12,6 +12,7 @@
         <module>transport-carriage-commons</module>
         <module>transport-carriage-web</module>
         <module>transport-carriage-services</module>
+        <module>transport-carriage-view</module>
     </modules>
     <dependencies>
         <dependency>
