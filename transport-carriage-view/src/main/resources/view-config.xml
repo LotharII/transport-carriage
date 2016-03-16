@@ -3,8 +3,4 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-      <import resource="SpringServlet-servlet.xml"/>
-      <import resource="classpath:services-config.xml"/>
-      <import resource="classpath:spring-mongo.xml"/>
-      <import resource="classpath:view-config.xml"/>
 </beans>
