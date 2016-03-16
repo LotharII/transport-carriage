@@ -17,6 +17,7 @@
         <module>transport-carriage-web</module>
         <module>transport-carriage-services</module>
         <module>transport-carriage-view</module>
+        <module>transport-carriage-dao</module>
     </modules>
     <dependencies>
         <dependency>

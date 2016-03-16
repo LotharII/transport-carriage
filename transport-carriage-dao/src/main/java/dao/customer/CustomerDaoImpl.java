@@ -1,7 +1,6 @@
-package dao.impl;
+package dao.customer;
 
-import dao.api.CustomerDao;
-import model.Customer;
+import dao.generic.GenericDaoImpl;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
@@ -14,7 +13,7 @@ public class CustomerDaoImpl extends GenericDaoImpl<Customer> implements Custome
 
     public Customer findByEmail(String email) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("email").is(email));
+        query.addCriteria(Criteria.where(CustomerConstants.EMAIL_QUERY_FIELD).is(email));
         return getMongoTemplate().findOne(query, getEntityClass());
     }
 }

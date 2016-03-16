@@ -1,4 +1,4 @@
-package services.impl;
+package services.spring;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 @Service("authenticationService")
 public class SpringSecurityAuthProvider implements UserDetailsService {
 
-    @Override
     public UserDetails loadUserByUsername(String email)
             throws UsernameNotFoundException {
 //        Map<String, Object> parameters = new HashMap<>();

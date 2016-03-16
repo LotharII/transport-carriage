@@ -1,5 +1,7 @@
-package model;
+package dao.carrier;
 
+import dao.generic.Entity;
+import dao.order.Order;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,10 +11,7 @@ import java.util.List;
  * Created by oleksii.khilkevych on 3/16/2016.
  */
 @Document(collection = "carrier")
-public class Carrier {
-
-    @Id
-    private String carrierId;
+public class Carrier extends Entity{
 
     private CarrierType carrierType;
 
@@ -20,15 +19,7 @@ public class Carrier {
 
     private Integer yearsOfExpirience;
 
-    private List<Order> orders;
-
-    public String getCarrierId() {
-        return carrierId;
-    }
-
-    public void setCarrierId(String carrierId) {
-        this.carrierId = carrierId;
-    }
+    private List<String> orderIds;
 
     public CarrierType getCarrierType() {
         return carrierType;
@@ -54,11 +45,11 @@ public class Carrier {
         this.yearsOfExpirience = yearsOfExpirience;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+    public List<String> getOrderIds () {
+        return orderIds;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
+    public void setOrderIds (List<String> orderIds) {
+        this.orderIds = orderIds;
     }
 }

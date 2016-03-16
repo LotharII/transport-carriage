@@ -1,4 +1,4 @@
-package dao.api;
+package dao.generic;
 
 /**
  * Created by oleksii.khilkevych on 3/15/2016.

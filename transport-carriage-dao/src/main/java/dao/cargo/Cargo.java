@@ -1,5 +1,6 @@
-package model;
+package dao.cargo;
 
+import dao.generic.Entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,20 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * Created by oleksii.khilkevych on 3/16/2016.
  */
 @Document(collection = "cargo")
-public class Cargo {
-
-    @Id
-    private String cargoId;
+public class Cargo extends Entity{
 
     private CargoType cargoType;
-
-    public String getCargoId() {
-        return cargoId;
-    }
-
-    public void setCargoId(String cargoId) {
-        this.cargoId = cargoId;
-    }
 
     public CargoType getCargoType() {
         return cargoType;

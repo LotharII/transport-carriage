@@ -3,7 +3,7 @@ package rest.resources;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
-import services.api.CustomerService;
+import services.customer.CustomerService;
 import view.CustomerView;
 
 
@@ -11,7 +11,7 @@ import view.CustomerView;
  * Created by oleksii.khilkevych on 3/2/2016.
  */
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/dao/customer")
 public class CustomerResource {
 
     @Autowired
@@ -24,7 +24,7 @@ public class CustomerResource {
 
     @RequestMapping(value = "/registry", method = RequestMethod.POST)
     public void registry(
-            @RequestParam("customer") CustomerView customerView) {
+            @RequestParam("dao/customer") CustomerView customerView) {
         customerServiceImpl.insertCustomer(customerView);
     }
 

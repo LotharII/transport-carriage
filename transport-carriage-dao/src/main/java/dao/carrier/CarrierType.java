@@ -1,4 +1,4 @@
-package model;
+package dao.carrier;
 
 /**
  * Created by oleksii.khilkevych on 3/16/2016.

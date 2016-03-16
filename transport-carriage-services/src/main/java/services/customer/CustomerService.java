@@ -1,6 +1,5 @@
-package services.api;
+package services.customer;
 
-import model.Customer;
 import view.CustomerView;
 
 /**
@@ -9,7 +8,6 @@ import view.CustomerView;
 public interface CustomerService {
 
     void insertCustomer(CustomerView customer);
-
 
     CustomerView getCustomerByMail(String email);
 }

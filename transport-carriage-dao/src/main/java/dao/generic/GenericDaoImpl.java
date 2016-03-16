@@ -1,6 +1,5 @@
-package dao.impl;
+package dao.generic;
 
-import dao.api.GenericDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;

@@ -1,11 +1,9 @@
-package services.impl;
+package services.customer;
 
-import converter.service.CustomerConverter;
-import dao.api.CustomerDao;
-import model.Customer;
+import dao.customer.CustomerDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import services.api.CustomerService;
+import services.customer.CustomerService;
 import view.CustomerView;
 
 /**
@@ -18,14 +16,11 @@ public class CustomerServiceImpl implements CustomerService{
     @Autowired
     private CustomerDao customerDao;
 
-    @Autowired
-    private CustomerConverter customerConverter;
-
     public void insertCustomer(CustomerView customer){
-        customerDao.persist(customerConverter.convertViewToModel(customer));
+        customerDao.persist(customer.convertViewToModel());
     }
 
     public CustomerView getCustomerByMail(String email){
-        return customerConverter.convertModelToView(customerDao.findByEmail(email));
+        return new CustomerView(customerDao.findByEmail(email));
     }
 }
