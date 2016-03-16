@@ -11,7 +11,7 @@ import view.CustomerView;
  * Created by oleksii.khilkevych on 3/2/2016.
  */
 @RestController
-@RequestMapping("/dao/customer")
+@RequestMapping("/customer")
 public class CustomerResource {
 
     @Autowired
