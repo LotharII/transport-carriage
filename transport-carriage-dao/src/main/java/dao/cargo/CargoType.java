@@ -8,6 +8,7 @@ public enum CargoType {
     FURNITURE,
     TRASH,
     OFFICE_EQUIPMENT,
+    ANIMALS,
     OTHER
 
 }
